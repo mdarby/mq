@@ -1,10 +1,10 @@
 <tr id="<%%= dom_id(<%= object_name %>) %>">
-  <td><%= object_name %>.to</td>
-  <td><%= object_name %>.mailer_method</td>
+  <td><%%=<%= object_name %>.to %></td>
+  <td><%%=<%= object_name %>.mailer_method %></td>
   <td><%%= time_ago_in_words(<%= object_name %>.created_at) %> ago</td>
   
   <%% if <%= object_name %>.attempts > 0 %>
-    <td><%= object_name %>.attempts</td>
+    <td><%%=<%= object_name %>.attempts %></td>
     <td><%%= time_ago_in_words(<%= object_name %>.last_attempt_at) %> ago</td>
   <%% else %>
     <td>&nbsp;</td>
@@ -12,4 +12,4 @@
   <%% end %>
   
   <td><%%= link_to "Deliver", deliver_<%= object_name %>_path(<%= object_name %>), :method => :get %></td>
-  <td><%%= link_to 'Delete', <%= object_name %>_path(@<%= object_name %>), :method => :destroy %></td>
+  <td><%%= link_to 'Delete', <%= object_name %>_path(<%= object_name %>), :method => :delete %></td>

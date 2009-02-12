@@ -39,7 +39,7 @@ class MqGenerator < Rails::Generator::NamedBase
       m.template "email.rb", File.join('app/models', "#{table_name.singularize}.rb")
 
       # Migrations
-      m.migration_template "create_email_table.rb", "db/migrate", :migration_file_name => "create_mq_table"
+      m.migration_template "create_email_table.rb", "db/migrate", :migration_file_name => "create_#{object_name}_table"
       
       # Views
       m.template "views/index.html.erb", File.join("app/views/#{table_name}", "index.html.erb")

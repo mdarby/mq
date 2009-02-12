@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name     = "pollster"
+  s.name     = "mq"
   s.version  = "0.1"
   s.date     = "2009-02-11"
   s.summary  = "An email queue that actually works"

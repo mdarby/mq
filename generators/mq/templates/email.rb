@@ -36,7 +36,7 @@ class <%= class_name %> < ActiveRecord::Base
   private
 
     def self.generate_mail(method, address, args)
-      create!(:mailer_method => method, :tmail => <% mailer_name %>.send("create_#{method}".to_sym, address, *args))
+      create!(:mailer_method => method, :tmail => <%= mailer_name %>.send("create_#{method}".to_sym, address, *args))
     end
 
 end

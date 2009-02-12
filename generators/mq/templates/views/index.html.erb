@@ -1,0 +1,22 @@
+<h1>Queued Emails</h1>
+
+<%% if <%= class_name %>.count > 0 %>
+  <%%= link_to "Deliver All", deliver_all_<%= object_name %>s_path %>
+  <%%= link_to "Destroy All", destroy_all_<%= object_name %>s_path, :confirm => "Are you really sure?" %>
+<%% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>To</th>
+      <th>Method</th>
+      <th>Created</th>
+      <th>Attempts</th>
+      <th>Last Attempt</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <%%= render :partial => "<%= object_name %>", :collection => @<%= object_name %>s %>
+  </tbody>
+</table>

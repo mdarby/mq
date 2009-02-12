@@ -1,0 +1,29 @@
+h2. mq
+
+A Rails gem that generates an MVC stack that does email queuing
+
+h3. What it does
+
+I got tire of crappy attempts at queuing emails, so I wrote my own. mq is a generator that generates an MVC stack for queuing emails. It has a UI too.
+
+h3. Requirements
+
+An existing Mailer
+
+h3. How to Install
+
+<pre>sudo gem install mdarby-mq</pre>
+
+h3. How to Use
+
+<pre>./script/generate mq EmailModelName MailerModelName</pre>
+
+h3. How to Test
+
+Complete Rspec specs are included automatically. Well, complete aside from view specs as you'll just change the damned things anyway.
+
+h3. About the Author
+
+My name is Matt Darby. I'm the Lead Web Developer and IT Manager at "Dynamix Engineering":http://dynamix-ltd.com and hold a Master's Degree in Computer Science from "Franklin University":http://franklin.edu in Columbus, OH.
+
+Feel free to check out my "blog":http://blog.matt-darby.com or to "recommend me":http://www.workingwithrails.com/recommendation/new/person/10908-matt-darby

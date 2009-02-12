@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name     = "mq"
-  s.version  = "0.1"
+  s.version  = "0.1.1"
   s.date     = "2009-02-11"
   s.summary  = "An email queue that actually works"
   s.email    = "matt@matt-darby.com"
@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors  = ["Matt Darby"]
   s.files    = [
     "MIT-LICENSE",
-    "README",
+    "README.textile",
     "Rakefile",
     "generators/mq/mq_generator.rb",
     "generators/mq/templates/create_email_table.rb",

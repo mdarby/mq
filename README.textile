@@ -17,7 +17,7 @@ h3. How to Install
 
 h3. How to Use
 
-Assuming you'd like to name your mq table "Email", and your Mailer model is named "Notifier"
+Assuming you'd like to name your mq table @Email@, and your Mailer model is named @Notifier@
 
 Generate the files necessary for your app:
 <pre>./script/generate mq Email Notifier</pre>
@@ -30,6 +30,9 @@ Of course, you can pass as many parameters as you'd like:
 
 Queue an email by calling @Email.queue@ with the name of your Notifier method as the first parameter, and the recipient email address as the second parameter, followed by anything else you'd like to pass.
 <pre>Email.queue(:send_email_method, "matt@matt-darby.com")</pre>
+
+You can pass multiple email addresses to the @Email.queue@ method and mq will automatically generate individual emails for the recipients.
+<pre>Email.queue(:send_email_method, ["matt@matt-darby.com", "foo@bar.com"], ...)</pre>
 
 h3. Delivery of queued email
 

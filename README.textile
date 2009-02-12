@@ -4,11 +4,12 @@ A Rails gem that generates an MVC stack that does email queuing
 
 h3. What it does
 
-I got tired of dealing with crappy email queuing systems in Rails, so I wrote my own. mq is a generator that generates an MVC stack for queuing emails. It has a UI too.
+mq is a generator that generates an MVC stack for queuing emails. It has a UI too.
+I got tired of dealing with crappy email queuing systems in Rails, so I wrote my own.
 
 h3. Requirements
 
-An existing Mailer model
+None.
 
 h3. How to Install
 
@@ -16,21 +17,24 @@ h3. How to Install
 
 h3. How to Use
 
+Assuming you'd like to name your mq table "Email", and your Mailer model is named "Notifier"
+
 Generate the files necessary for your app:
-<pre>./script/generate mq EmailModelName MailerModelName</pre>
+<pre>./script/generate mq Email Notifier</pre>
 
 mq requires your Mailer methods accept an email address as its first parameter, so a Mailer method should look like:
-<pre>PostOffice.send_email_method(email_address)</pre>
+<pre>Notifier.send_email_method(email_address)</pre>
 
-Queue an email:
+Of course, you can pass as many parameters as you'd like:
+<pre>Notifier.send_email_method(email_address, some_object, some_other_object, ...)</pre>
+
+Queue an email by calling @Email.queue@ with the name of your Notifier method as the first parameter, and the recipient email address as the second parameter, followed by anything else you'd like to pass.
 <pre>Email.queue(:send_email_method, "matt@matt-darby.com")</pre>
 
 h3. Delivery of queued email
 
-<pre>
-  # Assuming you choose to name your EmailModelName "Email"
-  cd /path/to/your/app && ./script/runner/Email.deliver_all
-</pre>
+You can create a cronjob (this on runs every five minutes)
+<pre>*/5 * * * * cd /path/to/your/app && ./script/runner/Email.deliver_all</pre>
 
 h3. How to Test
 

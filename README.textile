@@ -43,6 +43,10 @@ h3. How to Test
 
 Complete Rspec specs are included automatically. Well, complete aside from view specs as you'll just change the damned things anyway.
 
+h3. Help
+
+Add a ticket to "MQ's Lighthouse Account":http://mdarby.lighthouseapp.com/projects/28699-mq/overview
+
 h3. About the Author
 
 My name is Matt Darby. I'm the Lead Web Developer and IT Manager at "Dynamix Engineering":http://dynamix-ltd.com and hold a Master's Degree in Computer Science from "Franklin University":http://franklin.edu in Columbus, OH.

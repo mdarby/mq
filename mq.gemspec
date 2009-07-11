@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name     = "mq"
-  s.version  = "0.1.1"
-  s.date     = "2009-02-11"
+  s.version  = "0.1.2"
+  s.date     = "2009-07-11"
   s.summary  = "An email queue that actually works"
   s.email    = "matt@matt-darby.com"
   s.homepage = "http://github.com/mdarby/mq"
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
     "generators/mq/templates/create_email_table.rb",
     "generators/mq/templates/email.rb",
     "generators/mq/templates/emails_controller.rb",
-    "generators/mq/templates/spec/email_routing_spec.rb",
+    "generators/mq/templates/spec/emails_routing_spec.rb",
     "generators/mq/templates/spec/email_spec.rb",
     "generators/mq/templates/spec/emails_controller_spec.rb",
     "generators/mq/templates/views/_email.html.erb",

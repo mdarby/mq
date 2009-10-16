@@ -13,7 +13,7 @@ None.
 
 h3. How to Install
 
-<pre>sudo gem install mdarby-mq -s http://gems.github.com</pre>
+<pre>sudo gem install mq -s http://gemcutter.com</pre>
 
 h3. How to Use
 

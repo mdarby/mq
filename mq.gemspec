@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name     = "mq"
-  s.version  = "0.1.2"
-  s.date     = "2009-07-11"
+  s.version  = "0.1.3"
+  s.date     = "2009-10-18"
   s.summary  = "An email queue that actually works"
   s.email    = "matt@matt-darby.com"
   s.homepage = "http://github.com/mdarby/mq"
@@ -28,5 +28,5 @@ Gem::Specification.new do |s|
     "mq.gemspec",
     "uninstall.rb"
   ]
-  
+
 end

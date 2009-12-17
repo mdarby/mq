@@ -36,6 +36,7 @@ Gem::Specification.new do |s|
      "generators/mq/templates/views/_email.html.erb",
      "generators/mq/templates/views/index.html.erb",
      "lib/mq.rb",
+     "mq.gemspec",
      "test/helper.rb",
      "test/test_mq.rb"
   ]
@@ -54,15 +55,9 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
-      s.add_development_dependency(%q<cucumber>, [">= 0"])
     else
-      s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
-      s.add_dependency(%q<cucumber>, [">= 0"])
     end
   else
-    s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
-    s.add_dependency(%q<cucumber>, [">= 0"])
   end
 end
 
